@@ -211,24 +211,38 @@ a:hover { color: var(--accent); }
   margin-top: 0.5rem;
 }
 
+.hero-offer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(19, 163, 224, 0.10);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.7rem 1rem;
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.offer-check {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .cta-microcopy {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin: 0.25rem 0 0;
 }
 
-.hero-promise[hidden] { display: none; }
-
 .hero-promise {
-  display: inline-block;
-  font-size: 0.95rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
   font-weight: 600;
+  line-height: 1.35;
   color: var(--text);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 0 0;
+  max-width: 620px;
+  margin: 0;
 }
 
 /* ── TRUST BAR ────────────────────────────────── */
@@ -335,8 +349,41 @@ a:hover { color: var(--accent); }
   color: var(--text-muted);
 }
 
+/* ── QUALIFIED CHECKLIST ──────────────────────── */
+.qualified-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.qualified-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+.qualified-item .check {
+  color: var(--accent);
+  font-weight: 700;
+}
+.value-callout {
+  max-width: 680px;
+  margin: 2.5rem auto 0;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+.value-callout strong { color: var(--accent); }
+
 @media (max-width: 640px) {
   .hiw-grid { grid-template-columns: 1fr; }
+  .qualified-list { grid-template-columns: 1fr; }
 }
 
 /* ── BOOKING ──────────────────────────────────── */
